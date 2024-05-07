@@ -1,0 +1,438 @@
+/* CSS Document */
+body {font-family: 'Poppins', sans-serif; margin:0px; padding:0px; background-color:#fff;}
+
+.register:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    float: left;
+    top: 0;
+    height: 100%;
+    display: flex; color:#fff;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top:0
+}
+.register-left input{
+    border: none;
+    border-radius: 4px;
+    padding: 10px 40px;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right {
+    background-color: #fff;
+    top: 20px;
+    float: left;
+    height: 100%;
+    padding: 127px 100px;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form {
+    padding: 41px;
+    margin: 0px; width:100%;
+}
+.btnRegister{
+    margin:25px 0;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 40px;
+    background: #c74871;
+    color: #fff;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 15%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.register .nav-tabs .nav-link.active{
+    
+    color: #fff;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+
+
+
+/* .register-bg-img {
+    background-image: url(../images/game.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50% 0;
+    width: 100%;
+    float: left;
+} */
+	
+
+.register-pd.register {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 0 0;
+}
+	
+.logo_login {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 50px 0 20px 0; 
+}	
+
+#logo-img {
+    border-radius: 35%; /* This will give your image a circular shape */
+    overflow: hidden; /* This will trim any part of the image that overflows the circular shape */
+    width: 240px; /* Set the width of your image */
+    height: 190px; /* Set the height of your image */
+  }
+
+.phone-nubg {width:16%; margin:0px; padding:0px; float:left;}
+.mobile-nu {
+    float: left;
+    margin-left: 8px; width:82%;
+}msg-error {
+  color: #4fc9d1;
+}
+.g-recaptcha.error {
+  border: solid 2px #4fc9d1;
+  padding: .2em;
+  width: 19em;
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+/**********dsf *************/
+
+.input-icon {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 15%;
+}
+
+span.input-group-text {
+    border: solid 1px;
+    padding: 12px 12px;
+    border-radius: 50px;
+    height: 100%;
+    color: #848484;
+    margin-top: 0px;
+    float: left;
+}
+.inputform {
+    float: l;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 85%;
+}
+.form-group.input-group {
+    width: 100%;
+}
+
+.input-group-prepend {
+    width: 11%;
+    float: left;
+}
+
+.control-form {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 89%;
+}
+
+
+
+input.form-control.mobile-contact {
+    float: left;
+    width: 83%;
+}
+
+select.custom-select {
+    float: left;
+    width: 90px;
+    margin: 0;
+    padding: 0px;
+    height: 40px;
+    margin-right: 8px; outline: none; box-shadow: none !important;
+   
+}.card.bg-light {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* login page css */
+
+.login_page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow-y: auto;  */
+    /* Enable vertical scrolling if needed */
+  }
+
+.bg_login {
+    background-image: url(../images/bgsky.svg);
+    background-color: #4fc9d1;
+    float: left;
+    /* margin: 0px;
+    padding: 00px; */
+    width: 100%;
+    background-size: cover;
+}
+
+.left_img_track {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+.heding_login {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 45% 0px;
+}
+.heding_login h1 {
+    text-align: center;
+    float: left;
+    margin: -20px;
+    padding: 0px;
+    width: 100%;
+    color: #fff;
+    font-size: 100px;
+}
+
+.right_filds_login {
+    width: 50%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.working_login {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.copyright_textiot {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 30px 0 0 0;
+    text-align: center;
+    border-top: solid 1px #ccc;
+}
+span.ig_wit {
+    background-color: #fff;
+    border: solid;
+    border-width: 2px;
+    padding: 10px 0px 0px 0px;
+    border-radius: 50%;
+    height: 50px;
+    float: left;
+    width: 50px;
+    text-align: center;
+    border-color: #e0e0e0;
+}
+input.enter_use_id {
+    width: 70%;
+    float: left;
+    margin: 0px;
+    padding: 10px 10px 10px 0px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #c1c0c0;
+    background: none;
+    font-family: 'Lato-Regular';
+    font-size: 19px;
+}
+.enter_email_id {
+    width: 430px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.left_icon {
+    width: 70px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.submit_bnt {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 20px 0 0 0;
+}
+.formgot_password a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1px;
+}
+.form_set_login {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 50px 50px 0px 120px;
+}
+
+
+p.sing_up_tals a {
+    color: #4fc9d1;
+    text-decoration: none;
+}
+p.sing_up_tals {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 10px 0 0 0;
+}
+
+.usr_name {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding: 15px 0 15px 0;
+}
+
+
+.registerform .form-group input {
+    border-radius: 0px;
+    border: solid 1px #ddd;
+    font-size: 17px;
+    /* text-transform: capitalize; */
+    margin: 0 0 20px;
+    height: 50px;
+    padding: 0 20px; outline: none; box-shadow: none;
+}
+.remember_me label {
+    font-size: 14px;
+    color: #a9a9a9;
+}
+.registerform .form-group select {
+    border-radius: 0px;
+    border: solid 1px #ddd;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+    height: 50px;
+    padding: 0 20px;outline: none; box-shadow: none;
+}
+
+.registerform {
+    width: 100%;
+    float: left;
+}
+
+.check_boxlog {
+    height: auto !important;
+}
+
+.logo_login h3 {
+    color: #4fc9d1;
+    font-weight: 700;
+}
+
+.logo_login a img {
+    width: 200px;
+    margin: 0 0 30px;
+}
+
+.logo_login p {
+    color: #a9a9a9;
+}
+
+.sub_in_btn {
+    background: #4fc9d1;
+    color: #fff;
+    text-transform: uppercase !important;
+}
+.sub_in_btn:hover {
+    background: #082a12;
+    color: #fff;
+}
+
