@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { ChangeEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import API_BASE_URL from '../config/Config';
 
 function AddGames() {
   const [gameName, setGameName] = useState("");
@@ -29,7 +30,7 @@ function AddGames() {
       }
       formData.append('gameType', gameType);
 
-      const response = await axios.post('http://localhost:8000/api/upload', formData, {
+      const response = await axios.post(`${API_BASE_URL}/api/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

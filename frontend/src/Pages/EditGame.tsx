@@ -2,6 +2,7 @@ import React, { useState, ChangeEvent} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../components/Header';
+import API_BASE_URL from '../config/Config';
 
 interface Game {
   _id: number;
@@ -37,7 +38,7 @@ const EditGame = () => {
         formData.append('gamePhoto', gamePhoto); // Append the file object, not just the file path
       }
   
-      await axios.put(`http://localhost:8000/api/game/${id}`, formData, {
+      await axios.put(`${API_BASE_URL}/api/game/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import API_BASE_URL from '../config/Config';
 
 interface Game {
     _id: number;
@@ -20,7 +21,7 @@ function GamesList() {
     useEffect(() => {
         const fetchGames = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/gameList');
+                const response = await fetch(`${API_BASE_URL}/api/gameList`);
                 const data = await response.json();
                 setGames(data);
             } catch (error) {
@@ -40,7 +41,7 @@ function GamesList() {
 
     const handleDelete = async (id:number) => {
         try {
-            await axios.delete(`http://localhost:8000/api/game/${id}`)
+            await axios.delete(`${API_BASE_URL}/api/game/${id}`)
             //remove the deleted game from the state
             setGames(games.filter(game => game._id !== id));
         } catch (error) {
@@ -76,7 +77,7 @@ function GamesList() {
                             <td>{game.gameName}</td>
                             <td>{game.gameType}</td>
                             <td>
-                            <img src={`http://localhost:8000/photos/${game.gamePhoto}`} alt={game.gameName} style={{ display:'block',margin:'auto',maxWidth: '100px', maxHeight: '90px', borderRadius:'55px' }} />
+                            <img src={`${API_BASE_URL}/photos/${game.gamePhoto}`} alt={game.gameName} style={{ display:'block',margin:'auto',maxWidth: '100px', maxHeight: '90px', borderRadius:'55px' }} />
                             </td>
                             <td>
                                 <Link to={`/edit/${game._id}`}className="btn btn-custom btn-md me-1 m-2"style={{color:'black', backgroundColor:'#4fc9d1'}}>

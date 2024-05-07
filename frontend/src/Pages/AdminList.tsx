@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import API_BASE_URL from '../config/Config';
 
 interface People {
     _id: number;
@@ -20,7 +21,7 @@ function GamesList() {
     useEffect(() => {
         const fetchAdminList = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/getAdmin');
+                const response = await fetch(`${API_BASE_URL}/api/getAdmin`);
                 const data = await response.json();
                 setAdmins(data);
             } catch (error) {
@@ -42,7 +43,7 @@ function GamesList() {
         try {
             console.log(id);
             
-            await axios.delete(`http://localhost:8000/api/deleteAdmin/${id}`)
+            await axios.delete(`${API_BASE_URL}/api/deleteAdmin/${id}`)
             //remove the deleted game from the state
             setAdmins(admins.filter(admin => admin._id !== id));
             console.log(admins);

@@ -4,6 +4,7 @@ import "../assets/css/registration.css"
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import API_BASE_URL from '../config/Config'
 
 function Login() {
 
@@ -15,7 +16,7 @@ function Login() {
     const handleSubmit = async(event:React.FormEvent) => {
         event.preventDefault();
 
-        await axios.post('http://localhost:8000/api/login',{email:userId,password})
+        await axios.post(`${API_BASE_URL}/api/login`,{email:userId,password})
         .then((response) => {
             console.log("response of form: ",response.data);
             setUserId('')

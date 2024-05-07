@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
+import API_BASE_URL from '../config/Config'
 
 function SignUp() {
 
@@ -13,7 +14,7 @@ function SignUp() {
     const handleSubmit = async(e:React.FormEvent) => {
         e.preventDefault()
 
-        await axios.post('http://localhost:8000/api/register',{username,email,password})
+        await axios.post(`${API_BASE_URL}/api/register`,{username,email,password})
         .then((response) => {
             // Handle success
           if (response.status === 201) {
